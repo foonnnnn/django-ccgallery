@@ -1,0 +1,60 @@
+@media screen and (min-width: 740px){
+	div.sidebar{
+		width: 20%;
+		max-width: 15em;
+		float: left;
+		height: 100%;
+		display: block;
+	}
+		div.sidebar p{
+			font-size: 0.8em;
+			line-height: 1.5em;
+			font-weight: 300;
+			margin: 1.5em 0;
+			text-align: left;
+		}
+		div.sidebar img{
+			display: block;
+		}
+		div.sidebar p.intro span{
+			display: inline;
+		}
+		div.sidebar nav.sidebar{
+			display: block;
+		}
+
+	article{
+		width: 71%;
+		margin-left: 2%;
+		display: inline-block;
+	}
+
+	nav.next_prev{
+		width: 78%;
+		float: right;
+	}
+
+}
+@media screen and (min-width: 1200px){
+	body{
+		font-size: 1.2em;
+	}
+	div.content{
+		max-width: 40em;
+	}
+}
+@media screen and (max-width: 480px){
+	header.primary,
+	article,
+	footer.primary{
+		padding: 1%;
+		width: 98%;
+	}
+	div.highlight pre{
+		font-size: 0.7em !important;
+		line-height: 1.25em !important;
+	}
+	div.sidebar{
+		display: none;
+	}
+}

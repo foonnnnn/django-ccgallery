@@ -1,0 +1,11 @@
+{% extends 'ccgallery/base.html' %}
+
+{% block title %} Gallery {% endblock %}
+
+{% block content %}
+
+	{% for category in categories %}
+		{{category.name}}
+	{% endfor %}
+
+{% endblock %}

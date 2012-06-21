@@ -10,14 +10,15 @@ setup(
     name='ccgallery',
     version=VERSION,
     license='BSD 3 Clause',
-    description='',
+    description='A minimal Gallery application for Django',
     long_description=open('README.rst').read(),
-    author='',
-    author_email='',
-    url='',
+    author='c&c Design Consultants LTD',
+    author_email='studio@designcc.co.uk',
+    url='https://github.com/designcc/django-ccgallery',
     package_data={
         'ccgallery' : [
             'templates/ccgallery/*.html',
+            'static/ccgallery/*.jpg',
             'static/ccgallery/css/*.css',
         ],
     },
@@ -26,4 +27,4 @@ setup(
         'ccgallery.templatetags',
         'ccgallery.tests'
     ],
-    install_requires=[])
+    install_requires=['django-ccthumbs',])
