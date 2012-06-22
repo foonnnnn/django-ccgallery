@@ -38,6 +38,38 @@ class ViewTestCases(TestCase):
         # is 200
         self.assertEqual(200, response.status_code)
 
+    def test_item_200_with_category(self):
+        """item responds with a 200 OK"""
+        i1 = Item()
+        i1.slug = '1'
+        i1.title = '1'
+        i1.description = '1'
+        i1.save()
+        c1 = Category()
+        c1.slug = '1'
+        c1.title = '1'
+        c1.description = '1'
+        c1.status = Category.VISIBLE
+        c1.save()
+        i1.categories.add(c1)
+        request = self.rf.get(
+                reverse('ccgallery:item', args=[c1.slug, i1.slug]))
+        response  = item(request, i1.slug, c1.slug)
+        # is 200
+        self.assertEqual(200, response.status_code)
+
+    def test_item_200_with_fake_category(self):
+        """item responds with a 200 OK"""
+        i1 = Item()
+        i1.slug = '1'
+        i1.title = '1'
+        i1.description = '1'
+        i1.save()
+        request = self.rf.get(
+                reverse('ccgallery:item', args=['horse', i1.slug]))
+        response  = item(request, i1.slug, 'horse')
+        # is 200
+        self.assertEqual(200, response.status_code)
     def test_category_200(self):
         """category responds with a 200 OK"""
         c1 = Category()

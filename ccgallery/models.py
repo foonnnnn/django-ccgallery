@@ -109,6 +109,17 @@ class Item(models.Model):
             'slug': self.slug,
             })
 
+    @property
+    def image(self):
+        """returns the first image from the first visible item"""
+        model_cls = get_model()
+        try:
+            image = self.itemimage_set.all()[0]
+        except IndexError:
+            image = None
+        return image
+
+
 # TODO: test the ordering
 class ItemImage(models.Model):
     item = models.ForeignKey(

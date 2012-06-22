@@ -1,6 +1,6 @@
 from django.utils.importlib import import_module
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 
 

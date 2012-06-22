@@ -26,3 +26,9 @@ IMAGE_SIZES = getattr(
         (   (200,200),
             (640, 480),
             (1200, 960)))
+
+"""The markup language to use"""
+MARKUP_LANGUAGE = getattr(
+        settings,
+        'CCGALLERY_MARKUP_LANGUAGE',
+        'markdown')

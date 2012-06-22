@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
 
+{% block extra_css %}
+	<link
+		rel="stylesheet"
+		href="{{STATIC_URL}}ccgallery/css/gallery.css"
+		media="screen"
+		type="text/css">
+	{% block extra_ccgallery_css %}
+	{% endblock %}
+{% endblock %}
+
+{% block extra_js %}
+	{% block extra_ccgallery_js %}
+	{% endblock %}
+{% endblock %}
+
 {% block body_id %}ccgallery{% endblock %}
 
 {% block breadcrumbs %}

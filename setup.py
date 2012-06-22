@@ -7,7 +7,7 @@ if root_dir != '':
     os.chdir(root_dir)
 
 setup(
-    name='ccgallery',
+    name='django-ccgallery',
     version=VERSION,
     license='BSD 3 Clause',
     description='A minimal Gallery application for Django',
@@ -20,6 +20,14 @@ setup(
             'templates/ccgallery/*.html',
             'static/ccgallery/*.jpg',
             'static/ccgallery/css/*.css',
+            'static/ccgallery/fancybox/source/*.gif',
+            'static/ccgallery/fancybox/source/*.png',
+            'static/ccgallery/fancybox/source/*.css',
+            'static/ccgallery/fancybox/source/*.js',
+            'static/ccgallery/fancybox/source/*.png',
+            'static/ccgallery/fancybox/source/helpers/*.png',
+            'static/ccgallery/fancybox/source/helpers/*.css',
+            'static/ccgallery/fancybox/source/helpers/*.js',
         ],
     },
     packages=[
