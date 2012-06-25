@@ -4,8 +4,8 @@ from django.template import RequestContext
 from ccgallery.models import Category, get_model
 
 
-
 def category(request, slug):
+
     try:
         category = Category.objects.visible().get(slug=slug)
     except Category.DoesNotExist:
@@ -21,9 +21,11 @@ def category(request, slug):
                 'items': items,
                 }, RequestContext(request))
 
+
 def item(request, slug, category_slug=None):
     model_cls = get_model()
     category = None
+
     try:
         item = model_cls.objects.visible().get(slug=slug)
     except model_cls.DoesNotExist:
@@ -44,6 +46,7 @@ def item(request, slug, category_slug=None):
 
 
 def index(request):
+
     categories = Category.objects.visible()
 
     return render_to_response(
